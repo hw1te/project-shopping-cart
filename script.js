@@ -77,7 +77,19 @@ async function createItems() {
   });
 }
 
+function save() {
+  const list = document.querySelector('.cart__items');
+  saveCartItems(list.innerHTML);
+};
+
+function loadSaved() {
+  const list = document.querySelector('.cart__items');
+  return list.innerHTML = getSavedCartItems();
+};
+
 window.onload = async () => {
   await createItems();
   addButton();
+  save();
+  loadSaved();
 };
