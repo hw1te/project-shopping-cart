@@ -92,8 +92,21 @@ function loadSaved() {
   list.innerHTML = getSavedCartItems('cartItems');
 }
 
+function loadAPI(elementParent) {
+  const element = createCustomElement('section', 'loading', 'carregando...');
+  elementParent.appendChild(element);
+}
+
+function removeAPI(elementParent) {
+  const element = document.querySelector('.loading');
+  elementParent.removeChild(element);
+}
+
 window.onload = async () => {
+  const element = document.querySelector('.items');
+  loadAPI(element);
   await createItems();
+  removeAPI(element);
   addButton();
   loadSaved();
 };
