@@ -4,6 +4,8 @@ A simple single page application with a few functions of an E-commerce Shopping 
 
 :no_entry: **This project will be further modified to add new functions and corrections** :no_entry:
 
+[Site deployed using Vercel](https://project-shopping-cart-three.vercel.app/).
+
 ## Introduction
 
 This is a **Single Page Application** project where I used **Asynchronous JavaScript**and others concepts like:
